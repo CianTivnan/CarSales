@@ -11,6 +11,8 @@ import { ICar, Car } from "../interfaces/car";
 export class CarlistComponent implements OnInit {
   carsData: ICar[];
 
+  show:boolean;
+
   constructor(private _carAPIService:CarApiService) { }
 
   ngOnInit(): void {
