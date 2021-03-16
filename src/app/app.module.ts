@@ -7,10 +7,14 @@ import { HttpClientModule } from "@angular/common/http";
 
 
 import { AppComponent } from './app.component';
+import { CarlistComponent } from './carlist/carlist.component';
+import { CarComponent } from './car/car.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarlistComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,
