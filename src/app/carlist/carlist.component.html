@@ -1,23 +1,39 @@
-<button (click)="show = !show">{{show ? 'Hide' : 'Add a Car'}}</button>
+<button class="btn btn-primary" (click)="show = !show">{{show ? 'Hide' : 'Add a Car'}}</button>
 
-<div *ngIf="show">
+
+<div *ngIf="show" class="mx-auto">
     <form>
-        <label>Make</label>
-        <input type="text" name="make" placeholder="Enter Make" #make>
-
-        <label>Model</label>
-        <input type="text" name="model" placeholder="Enter Model" #model>
-
-        <label>Year</label>
-        <input type="text" name="year" placeholder="Enter Year" #year>
+        <div class="row">
+            <div class="col-4">
+                <label>Make</label>
+                <input type="text" name="make" placeholder="Enter Make" #make>  
+            </div>
+            
+            <div class="col-4">
+                <label>Model</label>
+                <input type="text" name="model" placeholder="Enter Model" #model>
+            </div>
+        </div>
         
-        <label>Image</label>
-        <input type="text" name="imageURL" placeholder="Enter Link to Image" #imageURL>
 
-        <button type="submit" (click)="addTheCar(make.value, model.value, year.value, imageURL.value)">Add the Car</button>
+        <div class="row">
+            <div class="col-4">
+                <label>Year</label>
+                <input type="text" name="year" placeholder="Enter Year" #year> 
+            </div>
+            
+            <div class="col-4">
+                <label>Image</label>
+            <input type="text" name="imageURL" placeholder="Enter Link to Image" #imageURL>
+            </div>
+
+            <div class="col-4">
+                <button class="btn btn-primary" type="submit" (click)="addTheCar(make.value, model.value, year.value, imageURL.value)">Add the Car</button>
+            </div>
+        </div>
     </form>
 </div>
 
-<div class="container">
+<div class="container mt-2">
     <app-car *ngFor="let carData of carsData" [carData]="carData"></app-car>
 </div>

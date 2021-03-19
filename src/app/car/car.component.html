@@ -1,15 +1,16 @@
-<div class="container">
-    <div class="row border">
-        <div class="col-3">
-            {{carData.make}}
+<div class="container mt-2">
+    <div class="row border font-weight-bold">
+        <div class="col-3 my-auto">
+            <h4>{{carData.make}}</h4>
         </div>
-        <div class="col-3">
-            {{carData.model}}
+        <div class="col-3  my-auto">
+            <h4>{{carData.model}}</h4>
         </div>
-        <div class="col-2">
-            {{carData.year}}
+        <div class="col-2  my-auto">
+            <h4>{{carData.year}}</h4>
+            <button class="btn btn-primary" (click)="deleteCar(carData.id)">Delete</button>
         </div>
-        <div class="col-4">
+        <div class="col-4  my-auto">
             <img src="{{carData.imageURL}}" [style.width.px]="carImageWidth"/>
         </div>
     </div>
