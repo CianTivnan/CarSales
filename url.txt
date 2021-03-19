@@ -1,0 +1,2 @@
+FIREBASE URL: https://carsales-ba4d6.web.app
+GITHUB REPO URL: https://github.com/CianTivnan/CarSales
